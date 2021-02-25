@@ -1,11 +1,8 @@
-﻿// Rock Paper Scissors Lizard Spock
+﻿// RockPaperScissorsLizardSpock.cpp
 
 #include <iostream>
 #include <ctime>
 #include <stdlib.h>
-
-
-
 
 int main() {
 
@@ -114,6 +111,4 @@ int main() {
     else if (user == 5 && computer == 5) {
         std::cout << "IT IS A TIE!\n";
     }
-
-
 }

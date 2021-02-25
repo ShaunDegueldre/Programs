@@ -1,18 +1,13 @@
+//MagicEightBall.cpp
 #include <iostream>
 #include <cstdlib>
 #include <string>
-
 
 int main() {
 
 	std::cout << "MAGIC 8-BALL\n\n\n";
 	srand(time(NULL));
 	int answer = std::rand() % 20;
-
-
-
-
-
 
 	if (answer == 0) {
 		std::cout << "It is certain.";
@@ -74,5 +69,4 @@ int main() {
 	else if (answer == 19) {
 		std::cout << "Very doubtful.";
 	}
-
 }

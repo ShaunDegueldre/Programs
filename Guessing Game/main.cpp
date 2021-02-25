@@ -1,3 +1,4 @@
+//main.cpp
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -9,7 +10,6 @@ int guess;
 int number;
 int cycles;
 int balance = 100;
-
 string player;
 
 int main() {
@@ -25,12 +25,8 @@ int main() {
 		int bet = getbet(balance);
 		cout << player << ": ";
 		int game = gamechoice();
-
-
-
 		int win_loss = letsplay(game);
 		int upbalance = update_balance(win_loss, bet, balance);
-
 		balance = upbalance;
 		cout << endl;
 		cout << player << " your current balance is: " << balance << endl << endl;

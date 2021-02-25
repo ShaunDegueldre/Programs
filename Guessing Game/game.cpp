@@ -1,7 +1,7 @@
+//game.cpp
 #include <iostream>
 #include <string>
 #include "game.hpp"
-
 
 using namespace std;
 
@@ -68,6 +68,7 @@ int gamechoice() {
 			cin >> choice;
 		}
 }
+
 //This funciton takes the game selected and then returns if the player won or lost and which game they played
 int letsplay(int game) {
 
