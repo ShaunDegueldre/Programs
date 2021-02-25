@@ -99,6 +99,36 @@ public:
 https://github.com/ShaunDegueldre/Programs/tree/main/Dating%20Profile%20Program
 ```
 
+### FizzBuzz
+The fizzbuzz program. 
+```
+#include <iostream>
+
+int main() {
+
+    // start of for loop
+    for (int i = 1; i <= 100; i++) {
+
+        //determine if number is divisible by 15   
+        if (i % 15 == 0) {
+            std::cout << "fizzbuzz\n";
+        }
+        //determine if number is divisible by 3
+        else if (i % 3 == 0) {
+            std::cout << "fizz\n";
+        }
+        //determine if number is divisible by 5
+        else if (i % 5 == 0) {
+            std::cout << "buzz\n";
+        }
+        //print out the rest of the numbers
+        else {
+            std::cout << i << "\n";
+        }
+    }
+}
+```
+
 ### Guessing Game
 
 This is a guessing game which will show the ability to utilize different functions which call on variables that where output by other functions.  It also shows the ability to check values and make sure that inaccurate values that might be entered will not be accepted.
