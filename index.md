@@ -7,7 +7,9 @@ As I learn more languages I will update with additional languages and programs.
 
 https://my.indeed.com/p/shaund-ud1wnga
 
+### Link to Linkedin Profile Page
 
+https://www.linkedin.com/in/shaun-degueldre-1ab0041b3/
 
 ### Intro
 
