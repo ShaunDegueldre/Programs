@@ -7,11 +7,10 @@ As I learn more languages I will update with additional languages and programs.
 
 <a href="url">https://my.indeed.com/p/shaund-ud1wnga</a>
 
-<a href="https://my.indeed.com/p/shaund-ud1wnga">Visit My Indeed Profile!</a>
+<a href="https://https://my.indeed.com/p/shaund-ud1wnga">Visit My Indeed Profile!</a>
 
 ### Link to Linkedin Profile Page
 
-<a href="url">https://www.linkedin.com/in/shaun-degueldre-1ab0041b3/</a>
 
 <a href="https://linkedin.com/in/shaun-degueldre-1ab0041b3/">Visit My Linkedin Profile!</a>
 
