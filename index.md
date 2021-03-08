@@ -2,6 +2,9 @@
 Also included within the repository are a collection of Java Script programs.
 As I learn more languages I will update with additional languages and programs. 
 # Shaun R Degueldre
+https://my.indeed.com/p/shaund-ud1wnga  -  link to my indeed profile page
+
+https://www.linkedin.com/in/shaun-degueldre-1ab0041b3/  -  link to my LinkedIn profile page
 
 ### Intro
 
