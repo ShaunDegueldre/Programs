@@ -1,4 +1,6 @@
 ## Welcome to a Collection of C++ programs
+Also included within the repository are a collection of Java Script programs.
+As I learn more languages I will update with additional languages and programs. 
 # Shaun R Degueldre
 
 ### Intro
