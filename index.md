@@ -13,6 +13,8 @@ As I learn more languages I will update with additional languages and programs.
 
 <a href="url">https://www.linkedin.com/in/shaun-degueldre-1ab0041b3/</a>
 
+<a href="https://linkedin.com/in/shaun-degueldre-1ab0041b3/">Visit My Linkedin Profile!</a>
+
 ### Intro
 
 After I completed my degree in Computer Science, I knew that I wanted to code.  I enjoy doing this and have found it to be rewarding and frustrating, exciting and aggravating all in one.  But the challenge of creating something and then watching it come to life and work as intended is truly amazing.  Below is a list of some of the programs I have written.  Contained within the folder is also a bunch of basic programs that I will sometimes find myself going back to reference and use to help create new programs.  
