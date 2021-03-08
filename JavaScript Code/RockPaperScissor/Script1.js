@@ -1,4 +1,5 @@
 // JavaScript source code
+//function to determine userinput
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
     if (userInput === 'rock') {
@@ -15,7 +16,7 @@ const getUserChoice = userInput => {
         return ("Please select 'ROCK', 'PAPER', or 'SCISSOR'");
     }
 };
-
+//function to determine computer input
 const getComputerChoice = () => {
     const randomChoice = Math.floor(Math.random() * 3);
     if (randomChoice === 0) {
@@ -29,7 +30,7 @@ const getComputerChoice = () => {
         return 'paper'
     }
 };
-
+//function deciding who the winner is
 const determineWinner = (userChoice, getComputerChoice) => {
     if (userChoice === 'rock' && getComputerChoice === 'rock') {
         return ('This game is a tie')
@@ -51,7 +52,7 @@ const determineWinner = (userChoice, getComputerChoice) => {
         return ('This game is a Tie')
     }
 };
-
+//function to play the game
 const playGame = () => {
     const userChoice = getUserChoice('paper');
     const ComputerChoice = getComputerChoice();
