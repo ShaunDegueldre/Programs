@@ -2,7 +2,8 @@
 Also included within the repository are a collection of Java Script programs.
 As I learn more languages I will update with additional languages and programs. 
 # Shaun R Degueldre
-Link to Indeed page:
+
+### Link to Indeed Profile Page
 
 https://my.indeed.com/p/shaund-ud1wnga
 
