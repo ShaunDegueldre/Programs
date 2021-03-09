@@ -1,4 +1,3 @@
-// JavaScript source code
 //function to determine userinput
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
@@ -10,6 +9,9 @@ const getUserChoice = userInput => {
         return userInput
     } else if (userInput === 'paper') {
         console.log("You entered 'PAPER'");
+        return userInput
+    } else if (userInput === 'bomb') {
+        console.log("You entered 'bomb'");
         return userInput
     } else {
         console.log('You have entered an invalid choice');
@@ -50,11 +52,12 @@ const determineWinner = (userChoice, getComputerChoice) => {
         return ('Computer WINS')
     } else if (userChoice === 'paper' && getComputerChoice === 'paper') {
         return ('This game is a Tie')
-    }
+    } else (userChoice === 'bomb')
+    return ('This game is over and the user Won by Cheating')
 };
 //function to play the game
 const playGame = () => {
-    const userChoice = getUserChoice('paper');
+    const userChoice = getUserChoice('bomb');
     const ComputerChoice = getComputerChoice();
     //console.log(`You threw: ${userChoice}`);
     //console.log(`The computer played: ${ComputerChoice}`);
