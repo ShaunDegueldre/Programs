@@ -19,7 +19,7 @@ I hope that by showcasing some of the programs I have written it will help to gr
 
 I have tried to maintain good coding practices by making sure that I have all my code commented so it should be easy to follow along and understand my code.  I am also continuing to code all the time and will add new programs that I write to this page and move some of the less intricate programs off the front page. Below is a program I wrote while expanding my knowledge with Codecademy. 
 
-### Dating Profile Program
+### Dating Profile Program (C++)
 This program helps to show the use of classes, objects, private, and public options in coding.  
 
 ```
@@ -109,7 +109,7 @@ public:
 https://github.com/ShaunDegueldre/Programs/tree/main/Dating%20Profile%20Program
 ```
 
-### FizzBuzz
+### FizzBuzz (C++)
 The fizzbuzz program. 
 ```
 #include <iostream>
@@ -138,7 +138,7 @@ int main() {
     }
 }
 ```
-### MadLib program/game
+### MadLib program/game (HTML, JavaScript, & .css)
 
 This is a program for a madlib game that I wrote while learning the HTML language.  This uses forms as well as all types of inputs for those forms.  It uses a .css file to design the page.
 
@@ -330,7 +330,7 @@ input[type="radio"] {
 }
 ```
 
-### Guessing Game
+### Guessing Game (C++)
 
 This is a guessing game which will show the ability to utilize different functions which call on variables that where output by other functions.  It also shows the ability to check values and make sure that inaccurate values that might be entered will not be accepted.
 
@@ -559,8 +559,50 @@ https://github.com/ShaunDegueldre/Programs/tree/main/Guessing%20Game
 
 ```
 
-### TicTacToe
+### Whale talk program (JavaScript)
+
+This is program which takes a string, inputs it into an array, removes the items wanted from that array and alters other items 
+within that array.  It then provides an output of the array converted back into a string form.
+
+```
+// JavaScript source code
+///creation of statement which needs to be changed into whale talk
+const input = 'This sentence is translated to whale talk';
+//creating an array to compare that consists of whale talk language..only vowels
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+//creation of blank array to store results in
+const resultArray = [];
+//creation of for loop to iterate through the input text
+for (let i = 0; i < input.length; i++) {
+    //creation of for loop to compare vowels array to input array
+    for (let j = 0; j < vowels.length; j++) {
+        //condition if input iteration = vowels iteration
+        if (input[i] === vowels[j]) {
+            //addition of met condition to resultArray array
+            resultArray.push(input[i])
+        }
+    }
+    //adding an additional e if the result is an e
+    if (input[i] === 'e')
+        resultArray.push('e');
+    //adding an additional u if the result is a u
+    if (input[i] === 'u')
+        resultArray.push('u');
+}
+//printing the resultArray array to the console
+console.log(resultArray);
+//creating a variable named whaleTalk to store the resultArray as one sentence
+let whaleTalk = resultArray.join('');
+//printing the resultArray with the join command
+console.log(resultArray.join(''));
+//printing the created variable whaleTalk 
+console.log(whaleTalk);
+```
+
+### TicTacToe (C++)
+
 Below is a TicTacToe game I wrote while completing the same course on Codecademy.  
+
 ```
 //ttt.cpp
 #include <iostream>
@@ -772,7 +814,7 @@ void endgame(); ce
 https://github.com/ShaunDegueldre/Programs/tree/main/TicTacToe%20Game
 ```
 
-### UFO Hangman Game
+### UFO Hangman Game (C++)
 
 ```markdown
 //ufo.cpp
@@ -1028,7 +1070,7 @@ void display_status(std::vector<char> incorrect, std::string answer);
 https://github.com/ShaunDegueldre/Programs/tree/main/UFO%20Hangman%20Game
 ```
 
-### Beginner programs
+### Beginner programs (C++)
 
 Below is a collection of small one-page programs that I have written.  
 
@@ -1147,8 +1189,10 @@ int main() {
         std::cout << "IT IS A TIE!\n";
     }
 }
+```
 
-//MagicEightBall.cpp
+MagicEightBall.cpp
+```
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -1220,8 +1264,9 @@ int main() {
 		std::cout << "Very doubtful.";
 	}
 }
-
-//HarryPotterQuiz.cpp
+```
+HarryPotterQuiz.cpp
+```
 #include <iostream>
 
 int main() {
@@ -1346,8 +1391,9 @@ int main() {
     std::cout << "Your are the house winner!\n";
     std::cout << "There are " << invalidinput << " invalid answers!\n";
 }
-
-//functionpalindrome.cpp
+```
+functionpalindrome.cpp
+```
 #include <iostream>
 
 // Define is_palindrome() here:
