@@ -1074,9 +1074,9 @@ https://github.com/ShaunDegueldre/Programs/tree/main/UFO%20Hangman%20Game
 
 Below is a collection of small one-page programs that I have written.  
 
-```
-// RockPaperScissorsLizardSpock.cpp
 
+###RockPaperScissorsLizardSpock.cpp
+```
 #include <iostream>
 #include <ctime>
 #include <stdlib.h>
@@ -1191,7 +1191,7 @@ int main() {
 }
 ```
 
-MagicEightBall.cpp
+###MagicEightBall.cpp
 ```
 #include <iostream>
 #include <cstdlib>
@@ -1265,7 +1265,7 @@ int main() {
 	}
 }
 ```
-HarryPotterQuiz.cpp
+###HarryPotterQuiz.cpp
 ```
 #include <iostream>
 
@@ -1392,7 +1392,7 @@ int main() {
     std::cout << "There are " << invalidinput << " invalid answers!\n";
 }
 ```
-functionpalindrome.cpp
+###Functionpalindrome.cpp
 ```
 #include <iostream>
 
