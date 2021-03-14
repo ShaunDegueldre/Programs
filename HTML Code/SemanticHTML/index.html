@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <header> <!-- A <header> is a container usually for either navigational links or introductory content containing <h1> to <h6> headings. -->
+        <h1>Navigational Links</h1>
+        <nav>  <!--A <nav> is used to define a block of navigation links such as menus and tables of contents. It is important to note that <nav> can be used inside of the <header> element but can also be used on its own. -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <main>
+        <!-- The element <main> is used to encapsulate the dominant content within a webpage. This tag is separate from the <footer> and the <nav> of a web page since these elements don’t contain the principal content. -->
+        <p>This is where the main content will go once the page is built out!</p>
+        <section>
+            <!--<section> defines elements in a document, such as chapters, headings, or any other area of the document with the same theme. -->
+            <article>
+                <!-- The <article> element holds content that makes sense on its own. <article> can hold content such as articles, blogs, comments, magazines, etc -->
+                <h2>Facts About Dogs</h2>
+                <p>
+                    Dogs have a sense of time. It's been proven that they know the difference between a hour and five. If conditioned to, they can predict future events, such as regular walk times.
+                </p>
+                <aside>
+                    <!-- The <aside> element is used to mark additional information that can enhance another element but isn’t required in order to understand the main content. Some common uses of the <aside> element are for: Bibliographies, Endnotes, Comments, Pull quotes, Editorial sidebars, Additional information -->
+                    <p>
+                        A study was conducted on dogs being away from their owners for varying hours and the studies show that dogs who were away from their owners the longest showed the greatest amount of affection!
+                    </p>
+                </aside>
+            </article>
+        </section>
+        <figure>
+            <!--figure is an element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document -->
+            <img src="https://content.codecademy.com/courses/SemanticHTML/dogimage.jpeg">
+            <figcaption>
+                This image shows a dog.
+            </figcaption>
+        </figure>
+        <audio controls>  <!-- creates an audio box which plays audio selected in src value-->
+            <source src="https://content.codecademy.com/courses/SemanticHTML/dogBarking.mp3" type="audio/mp3">
+        </audio>
+        <!-- video and gif embed created below-->
+        <video src="https://content.codecademy.com/courses/SemanticHTML/dog-video.mp4" controls>Video not Supported </video>
+        <embed src="https://content.codecademy.com/courses/SemanticHTML/dog-on-beach.gif" />
+
+    </main>
+
+    <footer> <!-- The content at the bottom of the subject information is known as the footer, indicated by the <footer> element. The footer contains information such as Contact information, Terms of use, Site Map, top of page links-->
+        <p>Contact me at +1 234 567 8910 </p>
+    </footer>
+
+</body>
+</html>
