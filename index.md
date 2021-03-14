@@ -138,6 +138,197 @@ int main() {
     }
 }
 ```
+### MadLib program/game
+
+This is a program for a madlib game that I wrote while learning the HTML language.  This uses forms as well as all types of inputs for those forms.  It uses a .css file to design the page.
+
+```
+
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Form a Story</title>
+</head>
+<body>
+    <section id="top">
+        <img src="https://content.codecademy.com/courses/learn-html-forms/formAStoryLogo.svg" alt="Form A Story Logo">
+    </section>
+
+    <section id="main">
+        <h1>Complete the Form -<br> Complete the Story!</h1>
+        <hr>
+        <form action="story.html" method="GET">
+            <label for="animal-1">Animal:</label>
+            <input id="animal-1" type="text" name="animal-1" required>
+            <br>
+            <label for="animal-2">Another Animal:</label>
+            <input id="animal-2" type="text" name="animal-2" required>
+            <br>
+            <label for="animal-3">Another Animal:</label>
+            <input id="animal-3" type="text" name="animal-3" required>
+            <br>
+            <label for="adj-1">Adjective (Past Tense)</label>
+            <input id="adj-1" type="text" name="adj-1" required>
+            <br>
+            <label for="verb-1">Verb (Ends in -ing)</label>
+            <input id="verb-1" type="text" name="verb-1" required>
+            <br>
+            <label for="num-1">Number:</label>
+            <input id="num-1" type="number" name="num-1" required>
+            <br>
+            <span>Yes or No:</span>
+            <input type="radio" id="yes" name="answer" value="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="answer" value="no">
+            <label for="no">No</label>
+            <br>
+            <label for="speed">Relative speed (ends in -er)</label>
+            <select id="speed" name="speed">
+                <option value="faster">Fast</option>
+                <option value="faster">Faster</option>
+                <option value="faster">Fastest</option>
+            </select>
+            <br>
+            <label for="quote">Motivational Quote:</label>
+            <input list="quote-choices" id="quote" name="quote" type="text" required>
+            <datalist id="quote-choices">
+                <option value="Winner Winner Chicken Dinner"></option>
+                <option value="Early Bird Gets the Worm"></option>
+                <option value="Eyes of an eagle"></option>
+            </datalist>
+            <label for="message">Meaningful Message:</label>
+            <br>
+            <textarea id="message" name="message" rows="8" cols="40" required>Enter a meaningful message
+        </textarea>
+            <br>
+            <br>
+            <input type="submit" value="Form My Story!">
+        </form>
+
+    </section>
+</body>
+</html>
+
+```
+
+This is the main javascript file
+
+```
+// JavaScript source code
+// Grab values from the submitted form in the URL
+const words = new URLSearchParams(window.location.search);
+
+// Cleans up and capitalizes the names of the animals
+function cleanAndCap(str) {
+    if (!str) return null
+    let temp = str.trim()
+    return temp[0].toUpperCase() + temp.substring(1)
+}
+
+// Assigning the variables with values used in the story
+const firstAnimal = cleanAndCap(words.get('animal-1'));
+const secondAnimal = cleanAndCap(words.get('animal-2'));
+
+const answer = cleanAndCap(words.get('answer'));
+const conjunction = answer === 'Yes' ? 'and' : 'but';
+
+const speed = words.get('speed');
+const adj1 = words.get('adj-1');
+
+const thirdAnimal = cleanAndCap(words.get('animal-3'));
+const quote = words.get('quote');
+
+const verb1 = words.get('verb-1');
+const num1 = words.get('num-1');
+const message = words.get('message');
+
+// The string containing HTML and text which will populate the story.html page
+const story = `<p>A <span class="word" title="id: animal-1">${firstAnimal}</span> was making fun of the <span class="word" title="id: animal-2">${secondAnimal}</span> one day for being so slow.</p>
+<p>"Do you ever get anywhere?" he asked with a mocking laugh.</p>
+<p>"<span class="word" title="id: answer">${answer}</span>," replied the <span class="word" title="id: animal-2">${secondAnimal}</span>, "${conjunction} I get there <span class="word" title="id: speed">${speed}</span> than you think. I'll run you a race and prove it."</p>
+<p>The <span class="word" title="id: animal-1">${firstAnimal}</span> was much <span class="word" title="id: adj-1">${adj1}</span> at the idea of running a race with the <span class="word" title="id: animal-2">${secondAnimal}</span>, but for the fun of the thing he agreed. So the <span class="word" title="id: animal-3">${thirdAnimal}</span>, who had consented to act as judge, marked the distance yelled, "<span class="word" title="id: quote">${quote}</span>".</p>
+<p>The <span class="word" title="id: animal-1">${firstAnimal}</span> was soon far out of sight, and to make the <span class="word" title="id: animal-2">${secondAnimal}</span> feel very deeply how ridiculous it was for him to try a race with a <span class="word" title="id: animal-1">${firstAnimal}</span>, he went off the course to practice <span class="word" title="id: verb-1">${verb1}</span> for <span class="word" title="id: num-1">${num1}</span> hours until the <span class="word" title="id: animal-2">${secondAnimal}</span> should catch up.</p>
+<p>The <span class="word" title="id: animal-2">${secondAnimal}</span> meanwhile kept going slowly but steadily, and, after a time, passed the place where the <span class="word" title="animal-1">${firstAnimal}</span> was <span class="word" title="id: verb-1">${verb1}</span>. The <span class="word" title="id: animal-1">${firstAnimal}</span> was so caught up in <span class="word" title="id: verb-1">${verb1}</span>; and when at last he did stop, the <span class="word" title="id: animal-2">${secondAnimal}</span> was near the goal. The <span class="word" title="id: animal-1">${firstAnimal}</span> now ran his swiftest, but he could not overtake the <span class="word" title="id: animal-2">${secondAnimal}</span> in time.</p>`;
+
+// Grabbing the title element
+const title = document.getElementById('title');
+// Populating the title element with text
+title.innerHTML = `The <span class="word" title="id: animal-1">${firstAnimal}</span> And The  <span class="word" title="id: animal-2">${secondAnimal}</span>`;
+
+// Grabbing the story element
+const storyEl = document.getElementById('story');
+// Populating the story element with the value of the story variable
+storyEl.innerHTML = story;
+
+// Grabbing the moral-message element
+const moralMessage = document.getElementById('moral-message');
+// Populating the moral-message element with text
+moralMessage.innerHTML = `<span class="italics" title="id: message">"${message}"</span>`;
+```
+
+And the .css file
+
+```
+﻿body {
+    background-color: rgb(255, 199, 64);
+    font-family: "Open Sans", Arial;
+}
+
+form {
+    line-height: 27px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    min-height: 15px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+input[type="radio"] {
+    margin-left: 12px;
+}
+
+#main {
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    height: 80vh;
+    border-radius: 15px;
+    margin: 2% 10%;
+    overflow: auto;
+}
+
+#story {
+    padding: 0 3%;
+}
+
+#top {
+    background-color: rgb(255, 255, 255);
+    margin: 2% 10%;
+    border-radius: 15px;
+}
+
+    #top img {
+        display: block;
+        width: 35%;
+        margin: 0 auto;
+    }
+
+.italics {
+    font-style: italic;
+}
+
+.word {
+    font-weight: bold;
+    text-decoration: underline;
+}
+```
 
 ### Guessing Game
 
