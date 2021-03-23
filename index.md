@@ -1,4 +1,4 @@
-## Welcome to a Collection of C++, HTML, and Java Script programs
+## Welcome to a Collection of C++, HTML, CSS, C#, and Java Script programs.
 This repository I will be adding new languages as I learn them and continually updating any new programs I have written.
 As I learn more languages I will update with additional languages and programs. 
 # Shaun R Degueldre
