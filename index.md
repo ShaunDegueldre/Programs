@@ -419,6 +419,187 @@ input[type="radio"] {
 }
 ```
 
+### SuperClass and SubClass breakdown (C#)
+
+This is a breakdown of the use of superclass and subclasses in C#.  It shows the use of override, abstract, interfaces, and inheritances as it combines the properties of
+different characteristics for vechicle types.
+
+Bicycle.cs
+```
+using System;
+
+namespace LearnInheritance
+{
+    class Bicycle : Vehicle
+    {
+        public Bicycle(double speed) : base(speed)
+        {
+            Wheels = 2;
+        }
+        public override void SpeedUp()
+        {
+            Speed += 5;
+            if (Speed > 15)
+            {
+                Speed = 15;
+            }
+        }
+        public override void SlowDown()
+        {
+            Speed -= 5;
+            if (Speed < 0)
+            {
+                Speed = 0;
+            }
+        }
+        public override string Describe()
+        {
+            return $"This bicycle is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
+        }
+    }
+}
+```
+IAutomobile.cs
+```
+using System;
+
+namespace LearnInheritance
+{
+    interface IAutomobile
+    {
+        string LicensePlate { get; }
+        double Speed { get; }
+        int Wheels { get; }
+        void Honk();
+    }
+}
+```
+Program.cs
+```
+using System;
+
+namespace LearnInheritance
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Sedan s = new Sedan(60);
+            Console.WriteLine(s.Describe());
+            Truck t = new Truck(45, 500);
+            Console.WriteLine(t.Describe());
+            Bicycle b = new Bicycle(10);
+            Console.WriteLine(b.Describe());
+        }
+    }
+}
+```
+Sedan.cs
+```
+using System;
+
+namespace LearnInheritance
+{
+    class Sedan : Vehicle, IAutomobile
+    {
+        public Sedan(double speed) : base(speed)
+        {
+            Wheels = 4;
+        }
+        public override string Describe()
+        {
+            return $"This sedan is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
+        }
+    }
+}
+```
+Tools.cs
+```
+using System;
+
+namespace LearnInheritance
+{
+    static class Tools
+    {
+        private static string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        public static string GenerateLicensePlate()
+        {
+            Random rand = new Random();
+            string licensePlate = "";
+            for (int i = 0; i < 8; i++)
+            {
+                licensePlate += chars[rand.Next(chars.Length)];
+            }
+            return licensePlate;
+        }
+    }
+}
+```
+Truck.cs
+```
+using System;
+
+namespace LearnInheritance
+{
+    class Truck : Vehicle, IAutomobile
+    {
+        public double Weight
+        { get; }
+        public Truck(double speed, double weight) : base(speed)
+        {
+            Weight = weight;
+            if (weight < 400)
+            {
+                Wheels = 8;
+            }
+            else
+            {
+                Wheels = 12;
+            }
+        }
+        public override string Describe()
+        {
+            return $"This truck is moving on {Wheels} wheels at {Speed} km/h, with license plate {LicensePlate}.";
+        }
+    }
+}
+```
+Vehicle.cs
+```
+using System;
+
+namespace LearnInheritance
+{
+    abstract class Vehicle
+    {
+        public string LicensePlate
+        { get; private set; }
+        public double Speed
+        { get; protected set; }
+        public int Wheels
+        { get; protected set; }
+        public Vehicle(double speed)
+        {
+            Speed = speed;
+            LicensePlate = Tools.GenerateLicensePlate();
+        }
+        public virtual void SpeedUp()
+        {
+            Speed += 5;
+        }
+        public virtual void SlowDown()
+        {
+            Speed -= 5;
+        }
+        public void Honk()
+        {
+            Console.WriteLine("HONK!");
+        }
+        public abstract string Describe();
+    }
+}
+```
+
 ### Guessing Game (C++)
 
 This is a guessing game which will show the ability to utilize different functions which call on variables that where output by other functions.  It also shows the ability to check values and make sure that inaccurate values that might be entered will not be accepted.
